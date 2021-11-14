@@ -1,0 +1,40 @@
+﻿@{
+	Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Добавление сотрудника</title>
+</head>
+<body>
+	<div>
+		<h3>Форма добавления сотрудника</h3>
+		<p/>
+		<form method="post">
+			<table>
+				<tr>
+					<td>Имя:</td>
+					<td><input type="text" name="Name" /> </td>
+				</tr>
+				<tr>
+					<td>Возраст:</td>
+					<td><input type="text" name="Age" /></td>
+				</tr>
+				<tr>
+					<td>Пол:</td>
+					<td>
+						<input type="radio" name="IsMen" value="false"> Ж<Br>
+						<input type="radio" name="IsMen" value="true"> М</p>
+					</td>
+				</tr>
+				<tr>
+					<td>Зарплата:</td>
+					<td><input type="number" name="Salary" /></td>
+				</tr>
+				<tr><td><input type="submit" value="Добавить" /> </td><td></td></tr>
+			</table>
+		</form>
+	</div>
+</body>
+</html>
