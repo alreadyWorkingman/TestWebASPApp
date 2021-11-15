@@ -10,7 +10,7 @@ using WebApplication3.Models;
 namespace WebApplication3.Controllers
 {
 	/// <summary>
-	/// Основной контроллер
+	/// Основной контроллер на /Home
 	/// </summary>
 	public class HomeController : Controller
 	{
@@ -78,6 +78,7 @@ namespace WebApplication3.Controllers
 			var emp = _employeeRepo.Get((int)id);
 			return View(emp);
 		}
+		//другой способ направления на метод
 		[HttpPost, ActionName("Delete")]
 		public string DeleteById(int? id)
 		{
@@ -86,15 +87,24 @@ namespace WebApplication3.Controllers
 			_logger.LogInformation($"Record with id = {id} deleted");
 			return $"Записи по id ({id}) удалена";
 		}
-
+		/// <summary>
+		/// Записывает лог о методе и пути запроса
+		/// </summary>
 		private void LogRequestInfo() => _logger.LogInformation("{0} request for uri [{1}]", Request.Method, Request.Path.ToString());
 
+		/// <summary>
+		/// Совершает проверку на null id и записи по этому id. Возвращает IActionResult при null значениях. В противном случае вернёт null.
+		/// </summary>
+		/// <param name="id">id проверяемой записи</param>
+		/// <returns></returns>
 		private IActionResult NullChecker(int? id)
 		{
+			//если не пришло id, то вернёт на домашнюю страницу
 			if (id == null)
 				return RedirectToAction("Index");
 
 			var emp = _employeeRepo.Get((int)id);
+			//если нет записи по id, то вернёт страницу с сообщением
 			if (emp == null)
 				return new ContentResult
 				{
