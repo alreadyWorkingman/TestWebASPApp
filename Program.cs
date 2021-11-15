@@ -23,7 +23,8 @@ namespace WebApplication3
 
 				try
 				{
-					var context = services.GetRequiredService<EmployeesContext>();
+					//инициализация тестовых данных
+					var context = services.GetRequiredService<EmployeeContext>();
 					SampleData.Initialize(context);
 				}
 				catch (Exception ex)

@@ -1,0 +1,44 @@
+﻿@model WebApplication3.Models.Employee
+@{
+	Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Удаление сотрудника</title>
+</head>
+<body>
+	<div>
+		<h3>Данные о сотруднике</h3>
+		<p />
+		<form method="post">
+			<table>
+				<tr>
+					<input type="hidden" name="id" value="@Model.Id" />
+					<td>Имя: @Model.Name</td>
+				</tr>
+				<tr>
+					<td>Возраст: @Model.Age</td>
+				</tr>
+				<tr>
+					@if (Model.IsMen)
+					{
+						<td>Пол: Мужской</td>
+					}
+					else
+					{
+						<td>Пол: Женский</td>
+
+					}
+				</td>
+			</tr>
+			<tr>
+				<td>Зарплата: @Model.Salary</td>
+			</tr>
+			<tr><td><input type="submit" value="Удалить" /> </td><td></td></tr>
+		</table>
+	</form>
+</div>
+</body>
+</html>

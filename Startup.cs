@@ -24,13 +24,12 @@ namespace WebApplication3
 
 		public void ConfigureServices(IServiceCollection services)
 		{
-			string connection = "Server=(localdb)\\mssqllocaldb;Database=empDB;Trusted_Connection=True;MultipleActiveResultSets=true";
-			services.AddDbContext<EmployeesContext>(options => options.UseSqlServer(connection));
+			string connection = Configuration.GetConnectionString("DefaultConnection");
+			services.AddDbContext<EmployeeContext>(options => options.UseSqlServer(connection));
 
 			services.AddControllersWithViews();
 		}
 
-		// This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
 		public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
 		{
 			if (env.IsDevelopment())
@@ -40,14 +39,9 @@ namespace WebApplication3
 			else
 			{
 				app.UseExceptionHandler("/Home/Error");
-				
 			}
-			//app.UseHttpsRedirection();
 			app.UseStaticFiles();
-
 			app.UseRouting();
-
-			//app.UseAuthorization();
 
 			app.UseEndpoints(endpoints =>
 			{

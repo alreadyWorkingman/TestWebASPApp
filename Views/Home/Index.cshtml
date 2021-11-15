@@ -16,24 +16,28 @@
 				<td>Возраст</td>
 				<td>Пол</td>
 				<td>Зарплата</td>
+				<td>Изменить</td>
+				<td>Удалить</td>
 				<td></td>
 			</tr>
 
 			@foreach (var emp in Model)
 			{
-				<tr>
-					<td>@emp.Name</td>
-					<td>@emp.Age</td>
-					@if (emp.IsMen)
-					{
-						<td>Мужчина</td>
-					}
-					else
-					{
-						<td>Женщина</td>
-					}
-					
-				</tr>
+		<tr>
+			<td>@emp.Name</td>
+			<td>@emp.Age</td>
+			@if (emp.IsMen)
+			{
+				<td>Мужчина</td>
+			}
+			else
+			{
+				<td>Женщина</td>
+			}
+			<td>@emp.Salary</td>
+			<td><a href="~/Home/Update/@emp.Id">&#9998</a></td>
+			<td><a href="~/Home/Delete/@emp.Id">&#128465</a></td>
+		</tr>
 			}
 		</table>
 		<a href="~/Home/Add/">Добавить</a>

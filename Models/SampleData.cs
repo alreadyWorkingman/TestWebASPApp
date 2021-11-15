@@ -5,16 +5,23 @@ using System.Threading.Tasks;
 
 namespace WebApplication3.Models
 {
-    public class SampleData
+    /// <summary>
+    /// Класс для создания начальных записей в табилце
+    /// </summary>
+    public static class SampleData
     {
-        public static void Initialize(EmployeesContext context)
+        /// <summary>
+        /// Добавляет 3 записи о работниках, если таблица пуста.
+        /// </summary>
+        /// <param name="context"> Контекст БД с Employeеs</param>
+        public static void Initialize(EmployeeContext context)
         {
-            if (!context.Employees.Any())
+            if (!context.Employeеs.Any())
             {
-                context.Employees.AddRange(
+                context.Employeеs.AddRange(
 
                     new Employee
-                    {
+                        {
                         Name="Александра", 
                         Age =20, 
                         IsMen = false, 

@@ -1,0 +1,54 @@
+﻿@model WebApplication3.Models.Employee
+@{
+	Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Обновить сотрудника</title>
+</head>
+<body>
+	<div>
+		<h3>Форма обновления сотрудника</h3>
+		<p />
+		<form method="post">
+			<table>
+				<tr>
+					<td>Имя:</td>
+					<td><input type="text" name="Name" value="@Model.Name" /> </td>
+				</tr>
+				<tr>
+					<td>Возраст:</td>
+					<td><input type="number" name="Age" value="@Model.Age" /></td>
+				</tr>
+				<tr>
+					<td>Пол:</td>
+					<td>
+						@if (Model.IsMen)
+						{
+							<p>
+								<input type="radio" name="IsMen" value="false"> Ж
+								<input checked ="checked" type="radio" name="IsMen" value="true"> М
+							</p>
+						}
+						else
+						{
+							<p>
+								<input  checked ="checked" type="radio" name="IsMen" value="false"> Ж
+								<input type="radio" name="IsMen" value="true"> М
+							</p>
+						}
+						
+					</td>
+				</tr>
+				<tr>
+					<td>Зарплата:</td>
+					<td><input type="number" name="Salary" value="@Model.Salary" /></td>
+				</tr>
+				<tr><td><input type="submit" value="Изменить" /> </td><td></td></tr>
+			</table>
+		</form>
+	</div>
+</body>
+</html>

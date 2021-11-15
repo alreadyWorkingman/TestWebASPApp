@@ -13,11 +13,6 @@ D:\Desktop\ASPProj\WebApplication3\obj\Debug\net5.0\WebApplication3.TagHelpers.i
 D:\Desktop\ASPProj\WebApplication3\obj\Debug\net5.0\WebApplication3.TagHelpers.output.cache
 D:\Desktop\ASPProj\WebApplication3\obj\Debug\net5.0\WebApplication3.RazorCoreGenerate.cache
 D:\Desktop\ASPProj\WebApplication3\obj\Debug\net5.0\Razor\Views\Home\Index.cshtml.g.cs
-D:\Desktop\ASPProj\WebApplication3\obj\Debug\net5.0\Razor\Views\Shared\Error.cshtml.g.cs
-D:\Desktop\ASPProj\WebApplication3\obj\Debug\net5.0\Razor\Views\Shared\_Layout.cshtml.g.cs
-D:\Desktop\ASPProj\WebApplication3\obj\Debug\net5.0\Razor\Views\Shared\_ValidationScriptsPartial.cshtml.g.cs
-D:\Desktop\ASPProj\WebApplication3\obj\Debug\net5.0\Razor\Views\_ViewImports.cshtml.g.cs
-D:\Desktop\ASPProj\WebApplication3\obj\Debug\net5.0\Razor\Views\_ViewStart.cshtml.g.cs
 D:\Desktop\ASPProj\WebApplication3\obj\Debug\net5.0\WebApplication3.RazorTargetAssemblyInfo.cache
 D:\Desktop\ASPProj\WebApplication3\obj\Debug\net5.0\WebApplication3.RazorTargetAssemblyInfo.cs
 D:\Desktop\ASPProj\WebApplication3\obj\Debug\net5.0\WebApplication3.dll
@@ -392,3 +387,5 @@ D:\Desktop\ASPProj\WebApplication3\obj\Debug\net5.0\WebApplication3.Views.pdb
 D:\Desktop\ASPProj\WebApplication3\obj\Debug\net5.0\WebApplication3.csproj.CopyComplete
 D:\Desktop\ASPProj\WebApplication3\obj\Debug\net5.0\WebApplication3.genruntimeconfig.cache
 D:\Desktop\ASPProj\WebApplication3\obj\Debug\net5.0\Razor\Views\Home\Add.cshtml.g.cs
+D:\Desktop\ASPProj\WebApplication3\obj\Debug\net5.0\Razor\Views\Home\Update.cshtml.g.cs
+D:\Desktop\ASPProj\WebApplication3\obj\Debug\net5.0\Razor\Views\Home\Delete.cshtml.g.cs
